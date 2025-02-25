@@ -16,11 +16,10 @@ WIFI_PASSWORD = "61174desamenganti"
 # MQTT_CONTROL_TOPIC = "iot/control"
 TOKEN = "BBUS-yzTeYERqDXIbREp17mfFoVvraflJiv"
 DHT_PIN = Pin(5)
-PIR_PIN = Pin()
 dht_sensor = dht.DHT11(DHT_PIN)
-pir_sensor = None
+pir_sensor = Pin(2, Pin.IN)
 
-server_url = "http://192.168.0.1/sensor_data"  # Ubah sesuai Flask server IP address
+server_url = "http://192.168.1.8:5000/sensor_data"  # Ubah sesuai Flask server IP address
 
 # def did_receive_callback(topic, message):
 #     print('\n\nData Received! \ntopic = {0}, message = {1}'.format(topic, message))
